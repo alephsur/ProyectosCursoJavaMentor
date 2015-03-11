@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;U2M2&apos; to &apos;A2M2&apos;&#x0D;&#x0A;- Original project: &apos;Actividad2Modulo2&apos;&#x0D;&#x0A;- Original element: &apos;Actividad2Modulo2/src/U2M2&apos;&#x0D;&#x0A;- Renamed element: &apos;Actividad2Modulo2/src/A2M2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;U2M2&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;U2M2" name="A2M2" qualified="false" references="true" stamp="1423472992674" textual="false" version="1.0"/>
+</session>

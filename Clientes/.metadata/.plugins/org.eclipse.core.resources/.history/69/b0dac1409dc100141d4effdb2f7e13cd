@@ -1,0 +1,42 @@
+package ClienteChat;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		boolean swP = false;
+		boolean swH = false;
+		boolean swN = false;
+		String ip;
+		int puerto ;
+		String nick;
+		
+		if(args.length < 6){
+			System.out.println("El numero de parametros es erroneo.\n");
+			System.out.println("El formato correcto es\n -h: Dirección IP del Servidor\n -p: Puerto del Servidor.\n-n: Nick del usuario.");
+		}
+		for(int i = 0;i<args.length;i++){
+			if(args[i] == "-h"){
+				swH = true;
+				ip = args[i+1];
+			}
+			if(args[i] == "-p"){
+				swP = true;
+				puerto = Integer.parseInt(args[i+1]);
+			}
+			if(args[i]== "-n"){
+				swN = true;
+				nick = args[i+1];
+			}
+		}
+		if(swH == false || swP == false || swN == false){
+			System.out.println("Los parametros no son correctos.\n");
+			System.out.println("El formato correcto es\n -h: Dirección IP del Servidor\n -p: Puerto del Servidor.\n-n: Nick del usuario.");
+		}
+		
+		
+		Cliente elCliente = new Cliente(ip,nick,puerto);
+		elCliente.DiseñarPantalla();
+	}
+
+}

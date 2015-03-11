@@ -1,0 +1,17 @@
+package ClienteChat;
+
+import java.io.BufferedReader;
+
+public class LecturaServidor extends Thread {
+
+		private BufferedReader in;
+		
+		public LecturaServidor(BufferedReader in){
+			this.in = in;
+		}
+		
+		@Override
+		public void run(){
+			
+		}
+}

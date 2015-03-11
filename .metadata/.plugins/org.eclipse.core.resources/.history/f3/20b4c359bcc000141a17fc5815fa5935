@@ -1,0 +1,16 @@
+package A3M3;
+
+import java.net.Socket;
+
+public class Cliente {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Socket cliente = new Socket("localhost", 1234);
+		
+		
+		
+	}
+
+}

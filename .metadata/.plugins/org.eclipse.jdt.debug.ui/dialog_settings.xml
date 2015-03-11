@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.debug.ui.MAIN_METHOD_SELECTION_DIALOG">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Actividad7/src&amp;lt;A7M1{Convertidor.java[Convertidor&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Actividad1Modulo3/C:\/Program Files \(x86)\/MySQL\/MySQL Connector J\/mysql-connector-java-5.1.34-bin.jar&amp;lt;com.mysql.jdbc(DocsConnectionPropsHelper.class[DocsConnectionPropsHelper&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Actividad1Modulo3/src&amp;lt;A1M3{main.java[main&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Actividad3Modulo3/src&amp;lt;A3M3{Cliente.java[Cliente&lt;/infoNode&gt;&#x0D;&#x0A;&lt;infoNode&gt;=Actividad3Modulo3/src&amp;lt;A3M3{Servidor.java[Servidor&lt;/infoNode&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="8" key="DIALOG_Y_ORIGIN"/>
+			<item value="122" key="DIALOG_X_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="500" key="SashWeightDetails"/>
+		<item value="500" key="SashWeightTree"/>
+		<item value="188" key="HEIGHT"/>
+		<item value="614" key="WIDTH"/>
+	</section>
+</section>

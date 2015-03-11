@@ -1,0 +1,161 @@
+import java.io.*;
+
+import java.net.*;
+
+ 
+
+public class ClienteSmtp{   // creamos una clase para nuestro cliente.
+
+      
+
+       static PrintStream ps = null;   // Stream de entrada del Socket
+
+       static BufferedReader dis = null;  // Stream de salida del Socket
+
+      
+
+       // preparamos un método a nuestro gusto para enviar datos al servidor
+
+public static void enviar(String str) throws IOException
+
+       {
+
+             ps.println(str);
+
+             ps.flush();      // Obligamos a enviar todo el flujo y a vaciar el buffer
+
+             System.out.println("E: " + str);    // mostramos en la consola lo enviado.
+
+       }
+
+ 
+
+       // preparamos un método a nuestro gusto para recibir datos del servidor
+
+ 
+
+       public static void recibir() throws IOException
+
+       {
+
+             String readstr = dis.readLine();   // obtenemos lo recibido del servidor.
+
+             System.out.println("R: "  + readstr);
+
+       }
+
+      
+
+       public static void main(String args[])
+
+       {
+
+             String HELO = "HELO ";
+
+             String MAIL_FROM = "MAIL FROM: <gerardo@terra.com>";
+
+             String RCTP_TO = "RCPT TO: <EnviarGerardo@hotmail.com>";
+
+             String DATA = "DATA";
+
+             String ASUNTO = "Subject: Actividad prueba";
+
+             String DESTINATARIO="EnviarGerardo@hotmail.com";
+
+             // ---etc---
+
+             java.util.Date date = new java.util.Date();
+
+             java.text.SimpleDateFormat sdf=new java.text.SimpleDateFormat("dd/MM/yyyy");
+
+             String FECHA = sdf.format(date);
+
+           String MENSAJE = "bla bla bla bla,  y soy feliz haciendo pruebas…";         
+
+           Socket smtp = null;         
+
+           try{ 
+
+              smtp = new Socket("smtp.terra.com",587);
+
+              OutputStream os = smtp.getOutputStream();
+
+              ps = new PrintStream(os);
+
+              InputStream is = smtp.getInputStream();
+
+              dis =new BufferedReader(new InputStreamReader (is));
+
+             // Usando otra clase para la salida
+
+             //smtp = new Socket("smtp.terra.com",587);
+
+             //ps = new DataOutputStream(smtp.getOutputStream());
+
+             //dis = new BufferedReader(new InputStreamReader(smtp.getInputStream()));
+
+           }
+
+           catch (IOException e)
+
+           {
+
+              System.out.println("Error al conectar:" + e);
+
+           }
+
+          
+
+           try{
+        	   
+        	   String USUARIO="athaloc_65@terra.com";  // no son verdaderos datos.
+
+               String PASSWORD="456mdfg";
+
+               byte[] data1 = USUARIO.getBytes();
+
+               byte[] data2 = PASSWORD.getBytes();
+
+               String USUARIO64 = javax.xml.bind.DatatypeConverter.printBase64Binary(data1);
+
+               String PASSWORD64 = javax.xml.bind.DatatypeConverter.printBase64Binary(data2);
+
+               String loc = InetAddress.getLocalHost().getHostName();
+
+               System.out.println("Conectar....");
+
+               recibir();
+
+               enviar(HELO + loc);
+
+               recibir();    
+
+enviar("AUTH LOGIN");
+
+               recibir();
+
+               enviar(USUARIO64);
+
+               recibir();
+
+               enviar(PASSWORD64);
+
+               recibir();
+
+               enviar(MAIL_FROM);           
+
+ //  seguimos la comumunicación como se indica en el enunciado… y se termina de implementar….
+
+           }
+
+           catch (IOException e)
+
+           {
+
+              System.out.println("Error al enviar: " + e);
+
+           }
+
+       }
+
+}
